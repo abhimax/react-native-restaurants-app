@@ -12,7 +12,7 @@ export default function App() {
   return (
     <View>
       <Header/>
-      <Search/>
+      <Search setTerm={setTerm}/>
       <Categories
         categories = {CategoryItems}
         setTerm = { setTerm }
