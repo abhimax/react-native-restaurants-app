@@ -1,12 +1,17 @@
 import { Image, Text, View, StyleSheet } from "react-native";
 import { elevation } from "../common/styles";
 
-const CategoryItem = ({ name, imageURL, index }) => {
+const CategoryItem = ({ name, imageURL, index, isActive }) => {
     return(
-        <View style={[styles.container, styles.elevation, index === 0 ? { marginLeft: 25} : {marginLeft: 15 } ]}>
+        <View style={[
+            styles.container,
+            styles.elevation,
+            index === 0 ? { marginLeft: 25} : {marginLeft: 15 },
+            isActive ? {backgroundColor : '#f2700f'} : {backgroundColor: 'white'}
+            ]}>
             <Image style={styles.image} source={imageURL}/>
              
-            <Text style={styles.header}>{name}</Text>
+            <Text style={[styles.header, isActive ? {color : 'white'} : {color: 'black'}]}>{name}</Text>
         </View>
     );
 }
