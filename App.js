@@ -10,7 +10,9 @@ export default function App() {
     <View style={styles.container}>
       <Header/>
       <Search/>
-      <CategoryItem/>
+      <CategoryItem name="Burger" imageURL={require("./src/assets/images/burger.png")}/>
+      <CategoryItem name="Pizza" imageURL={require("./src/assets/images/pizza.png")}/>
+      <CategoryItem name="Cake" imageURL={require("./src/assets/images/cake.png")}/>
       <StatusBar style="auto" />
     </View>
   );
