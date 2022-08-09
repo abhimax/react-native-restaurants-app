@@ -5,6 +5,7 @@ import Header from './src/components/Header';
 import Search from './src/components/Search';
 import CategoryItems from './src/data/db';
 import Categories from './src/components/Categories';
+import Restaurants from './src/components/Restaurants';
 
 export default function App() {
   const [term, setTerm] = useState("Burger");
@@ -18,6 +19,7 @@ export default function App() {
         setTerm = { setTerm }
         term = {term}
       />
+      <Restaurants/>
       <StatusBar style="auto" />
     </View>
   );
