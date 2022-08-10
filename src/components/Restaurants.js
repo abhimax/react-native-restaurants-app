@@ -1,19 +1,15 @@
-import yelp from '../api/yelp';
+import { useEffect } from "react";
+import useRestaurants from "../hooks/useRestaurants";
 const { View, Text, StyleSheet } = require("react-native");
 
-const Restaurants = () =>{
 
-    const searchRestaurants = async () => {
-        const response = await yelp.get('/search',{
-            params : {
-                limit : 15,
-                term : "Dessert",
-                location: "Toronto"
-            }
-        });
-        console.log(response);
-    }
-    searchRestaurants();
+const Restaurants = () =>{
+    const [{data, loading, error}, searchRestaurants] = useRestaurants();
+    useEffect(()=>{
+        searchRestaurants();
+    },[]);
+    
+    console.log(data, loading, error);
     return (
         <View style={styles.container}>
             <Text style={styles.header}>Restaurants</Text>
