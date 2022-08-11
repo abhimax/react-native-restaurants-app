@@ -19,8 +19,8 @@ export default function App() {
         setTerm = { setTerm }
         term = {term}
       />
-      <Restaurants/>
+      <Restaurants term={term}/>
       <StatusBar style="auto" />
     </View>
-  );
+  ); 
 }
