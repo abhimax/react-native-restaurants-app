@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import useRestaurants from "../hooks/useRestaurants";
+import RestaurantsItem from "./RestaurentItem";
 const { View, Text, StyleSheet, ActivityIndicator, FlatList } = require("react-native");
 
 
@@ -23,9 +24,8 @@ const Restaurants = ({term}) =>{
             <FlatList
                 data = {data}
                 keyExtractor = {(restaurant) => restaurant.id}
-                renderItem = {({item})=>{
-                   return <Text> {item.name}</Text>
-                }}
+                renderItem = {({item})=><RestaurantsItem restaurant={item}/>
+                }
             />
         </View>
     );
