@@ -7,7 +7,6 @@ export default (initialTerm = "Burger") => {
     loading: false,
     error: null,
   });
-
   const searchRestaurants = async (searchTerm) => {
     setResults({
       data: null,

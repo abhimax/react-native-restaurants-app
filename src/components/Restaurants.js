@@ -3,7 +3,6 @@ import useRestaurants from "../hooks/useRestaurants";
 import RestaurantsItem from "./RestaurentItem";
 const { View, Text, StyleSheet, ActivityIndicator, FlatList } = require("react-native");
 
-
 const Restaurants = ({term}) =>{
     const [{data, loading, error}, searchRestaurants] = useRestaurants();
     useEffect(()=>{
